@@ -15,7 +15,7 @@ import sympy
 
 # 変数・関数の定義
 w0s, w1s = sympy.symbols('w0 w1') # 代数的な変数の定義
-f_sym = 5 * sympy.exp((-1) * (w0s ** 2 + w1s ** 2)) # 変数の定義
+f_sym = 5 * (sympy.exp((-1) * (w0s ** 2 + w1s ** 2)) + sympy.exp(-1 * ((w0s - 1) ** 2 + (w1s - 1) ** 2))) # 変数の定義
 
 # 偏微分を計算
 df_dw0_sym = sympy.diff(f_sym, w0s)
